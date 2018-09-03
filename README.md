@@ -226,6 +226,8 @@ For example, a JWT auth client will be created when your code is running on your
 
 The code below shows how to retrieve a default credential type, depending upon the runtime environment. The createScopedRequired must be called to determine when you need to pass in the scopes manually, and when they have been set for you automatically based on the configured runtime environment.
 
+Note: In order to run on a local developer machine, it is necessary to download a private key file to your machine, and to set a local environment variable pointing to the location of the file. Create a service account using the Google Developers Console using the section APIs & Auth. Select "Generate new JSON key" and download the resulting file. Once this is done, set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to point to the location of the .json file.
+
 ```js
 async function main () {
 
